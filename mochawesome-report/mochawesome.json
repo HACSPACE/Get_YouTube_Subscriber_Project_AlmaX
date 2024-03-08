@@ -1,0 +1,294 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-08T11:34:03.438Z",
+    "end": "2024-03-08T11:34:03.912Z",
+    "duration": 474,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61906d65-5261-4bc9-b683-7148748759a5",
+      "title": "",
+      "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+      "file": "\\__tests__\\test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2fbcc8bd-f11d-4d9b-b9fa-30d028f46355",
+          "title": "API Testing",
+          "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+          "file": "\\__tests__\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "24aa66b1-123c-428d-94c3-b33e842eb661",
+              "title": "GET /",
+              "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+              "file": "\\__tests__\\test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should render admin dashboard",
+                  "fullTitle": "API Testing GET / should render admin dashboard",
+                  "timedOut": false,
+                  "duration": 120,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "chai.request(app)\n    .get('/')\n    .end((err, res) => {\n        if (err) return done(err); \n        expect(res).to.have.status(200); // Expecting a successful response status\n        expect(res.text).to.include('admin'); \n        done(); // Indicating completion of this test case\n    });",
+                  "err": {},
+                  "uuid": "2ef7668e-6476-4404-907b-4901fa252d02",
+                  "parentUUID": "24aa66b1-123c-428d-94c3-b33e842eb661",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2ef7668e-6476-4404-907b-4901fa252d02"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 120,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "41cda069-0682-4bf8-bd8d-aa0ca3dc93d6",
+              "title": "GET /start-now",
+              "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+              "file": "\\__tests__\\test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should render startNow page",
+                  "fullTitle": "API Testing GET /start-now should render startNow page",
+                  "timedOut": false,
+                  "duration": 32,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "chai.request(app)\n    .get('/start-now')\n    .end((err, res) => {\n        if (err) return done(err); \n        expect(res).to.have.status(200); // Expecting a successful response status\n        expect(res.text).to.include('Start Now'); \n        done(); // Indicating completion of this test case\n    });",
+                  "err": {},
+                  "uuid": "5cc28f4d-6b13-4045-a78a-730ca19839a8",
+                  "parentUUID": "41cda069-0682-4bf8-bd8d-aa0ca3dc93d6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5cc28f4d-6b13-4045-a78a-730ca19839a8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 32,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "4dfa6062-e9eb-4660-b42f-5f5f2dbf2ad1",
+              "title": "GET /subscribers",
+              "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+              "file": "\\__tests__\\test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get data of all subscribers",
+                  "fullTitle": "API Testing GET /subscribers should get data of all subscribers",
+                  "timedOut": false,
+                  "duration": 111,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "chai.request(app)\n    .get('/subscribers')\n    .end((err, res) => {\n        if (err) return done(err); \n        expect(res).to.have.status(200); // Expecting a successful response status\n        expect(res.body).to.be.an('array'); // Expecting the response body to be an array\n        done(); \n    });",
+                  "err": {},
+                  "uuid": "b7d2cd7b-5325-4de1-8a6b-f20c7dcc29e4",
+                  "parentUUID": "4dfa6062-e9eb-4660-b42f-5f5f2dbf2ad1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b7d2cd7b-5325-4de1-8a6b-f20c7dcc29e4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 111,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "b3588819-7540-44a0-9307-25ae67cffb2a",
+              "title": "GET /subscribers/names",
+              "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+              "file": "\\__tests__\\test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get names and subscribedChannel of all subscribers",
+                  "fullTitle": "API Testing GET /subscribers/names should get names and subscribedChannel of all subscribers",
+                  "timedOut": false,
+                  "duration": 25,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "chai.request(app)\n    .get('/subscribers/names')\n    .end((err, res) => {\n        if (err) return done(err); // Handling errors\n        expect(res).to.have.status(200); // Expecting a successful response status\n        expect(res.body).to.be.an('array'); // Expecting the response body to be an array\n        done(); \n    });",
+                  "err": {},
+                  "uuid": "2efc7457-1b7a-4e01-a6d9-3b86efa2b803",
+                  "parentUUID": "b3588819-7540-44a0-9307-25ae67cffb2a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2efc7457-1b7a-4e01-a6d9-3b86efa2b803"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 25,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "8c249304-ba29-47cf-bf5e-c17df0ece388",
+              "title": "GET /subscribers/:id",
+              "fullFile": "C:\\Users\\rs705\\Desktop\\TodoMernApp\\Get-YouTube-Subscriber-AlmaX\\__tests__\\test.js",
+              "file": "\\__tests__\\test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get a single subscriber by ID",
+                  "fullTitle": "API Testing GET /subscribers/:id should get a single subscriber by ID",
+                  "timedOut": false,
+                  "duration": 52,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const subscriberId = '65e9612eee0c7430581de5cc'; // Sample subscriber ID\nchai.request(app)\n    .get(`/subscribers/${subscriberId}`)\n    .end((err, res) => {\n        if (err) return done(err); // Handling errors\n        expect(res).to.have.status(200); // Expecting a successful response status\n        expect(res.body).to.be.an('object'); // Expecting the response body to be an object\n        done(); \n    });",
+                  "err": {},
+                  "uuid": "933a2749-b821-4d40-8529-1ab4726d773e",
+                  "parentUUID": "8c249304-ba29-47cf-bf5e-c17df0ece388",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should handle invalid subscriber ID",
+                  "fullTitle": "API Testing GET /subscribers/:id should handle invalid subscriber ID",
+                  "timedOut": false,
+                  "duration": 35,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const invalidSubscriberId = 'invalid_id'; // Invalid subscriber ID\nchai.request(app)\n    .get(`/subscribers/${invalidSubscriberId}`)\n    .end((err, res) => {\n        if (err) return done(err); // Handling errors\n        expect(res).to.have.status(400); // Expecting a bad request response status\n        expect(res.body).to.have.property('Error_message'); // Expecting the response body to have 'Error_message' property\n        done(); // Indicating completion of this test case\n    });",
+                  "err": {},
+                  "uuid": "cf349349-1983-4909-8bea-f656cf07e411",
+                  "parentUUID": "8c249304-ba29-47cf-bf5e-c17df0ece388",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "933a2749-b821-4d40-8529-1ab4726d773e",
+                "cf349349-1983-4909-8bea-f656cf07e411"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 87,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

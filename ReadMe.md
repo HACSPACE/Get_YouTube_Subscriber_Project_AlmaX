@@ -7,7 +7,7 @@
 - [Features](#features)
 - [Technologies Used](#technologies_used)
 - [Installation](#getting-started)
-- [Usage](#usage)
+- [Usage](#usage)   
 - [Contributing](#contributing)
 
 ## Introduction
@@ -18,12 +18,12 @@ Welcome to the Get YouTube Subscriber backend development project! This project 
 
 # __tests__
 * [__tests__](.\__tests__)
-    *[test.js](./__tests__/test.js)
+    * [test.js](./__tests__/test.js)
 
 
 # src
 
-* [models/](.\src\models)
+* [models](.\src\models)
     * [subscriber.js](.\src\models\subscriber.js)
         
 * [public](.\src\public)

@@ -2,12 +2,13 @@
 
 # dependencies
 /node_modules
+/mochawsome-report
 /.pnp
 .pnp.js
 
 # testing
 /coverage
-/mochawesome-report
+
 
 
 # production
