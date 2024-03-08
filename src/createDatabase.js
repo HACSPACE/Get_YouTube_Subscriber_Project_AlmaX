@@ -20,7 +20,8 @@ const db = mongoose.connection; // Get the default connection
 db.on('error', (err) => console.log(err));
 
 // If the connection is successful, log a success message
-db.once('open', () => console.log('Database created...'));
+db.once('open', () => console.log('Connected to MongoDB database...'));
+
 
 // Function to refresh all connections
 const refreshAll = async () => {
