@@ -17,100 +17,94 @@ Welcome to the Get YouTube Subscriber backend development project! This project 
 ## Folder Structure
 
 # __tests__
-* [test.js](.\__tests__\test.js)
+* [__tests__](.\__tests__)
+    *[test.js](./__tests__/test.js)
 
-#
 
 # src
 
-* [Components/](.\src\Components)
-    * [AboutUs](.\src\Components\AboutUs)
-        * [AboutUs.js](.\src\Components\AboutUs\About.js)
-    * [Data](.\src\Components\Data)
-        * [images](.\src\Components\Data\images)
-            * [BlueBrush.png](.\src\Components\Data\images\profile.png)
-            * [profile.jpg](.\src\Components\Data\images\profile.jpg)
-            * [temp1.png](.\src\Components\Data\images\temp1.png)
-            * [temp2.png](.\src\Components\Data\images\temp2.png)
-            * [temp3.png](.\src\Components\Data\images\temp3.png)
-            * [temp4.png](.\src\Components\Data\images\temp4.png)
-            * [tempbg3.png](.\src\Components\Data\images\tempbg3.png)
-        * [Data.js](.\src\Components\Data)
-    * [DetailsFillComponents](.\src\Components\DetailsFillComponents)
-        * [BottomNavigation.js](.\src\Components\DetailsFillComponents\BottomNavigation.js)
-        * [DetailsFillingPage.js](.\src\Components\DetailsFillComponents\DetailsFillingPage.js)
-        * [Education.js](.\src\Components\DetailsFillComponents\Education.js)
-        * [KeySkills.js](.\src\Components\DetailsFillComponents\KeySkills.js)
-        * [PersonalInfo.js](.\src\Components\DetailsFillComponents\PersonalInfo.js)
-        * [WorkEx.js](.\src\Components\DetailsFillComponents\WorkEx.js)
-    * [HomePage](.\src\Components\HomePage)
-        * [Home.css](.\src\Components\HomePage\Home.css)
-        * [Home.js](.\src\Components\HomePage\Home.css)
-    * [InputComponents](.\src\Components\InputComponents)
-        * [TextArea.js](.\src\Components\InputComponents\TextArea.js)
-        * [TextField.js](.\src\Components\InputComponents\TextField.js)
-    * [Navigation](.\src\Components\Navigation)
-        * [Navbar.js](.\src\Components\Navigation\Navbar.js)
-        * [DrawerComp.js](.\src\Components\Navigation\DrawerComp.js)
-    * [ResumeDisplay](.\src\Components\ResumeDisplay)
-        * [Modal.js](.\src\Components\ResumeDisplay\Modal.js)
-        * [MyResume.js](.\src\Components\ResumeDisplay\MyResume.js)
-    * [TemplatesComponents](.\src\Components\TemplatesComponents)
-        * [Template1.js](.\src\Components\TemplatesComponents\Template1.js)
-        * [Template2.js](.\src\Components\TemplatesComponents\Template2.js)
-        * [Template3.js](.\src\Components\TemplatesComponents\Template3.js)
-        * [Template4.js](.\src\Components\TemplatesComponents\Template4.js)
-* [ReduxManager](.\src\ReduxManager)
-    * [dataStoreSlice.js](.\src\ReduxManager\dataStoreSlice.js)
-* [App.css](.\src\App.css)
-* [App.js](.\src\App.js)
-* [index.css](.\src\index.css)
+* [models/](.\src\models)
+    * [subscriber.js](.\src\models\subscriber.js)
+        
+* [public](.\src\public)
+    * [images](.\src\public)
+        * [YouTubeLogo.png](.\src\public\YouTubeLogo.png)
+    * [scripts](.\src\scripts)
+        * [script.js](.\src\scripts\script.js)
+
+* [views](.\src\views)
+    * [admin.ejs](.\src\views\admin.ejs)
+    * [startNow.ejs](.\src\views\startNow.ejs)
+      
+* [app.js](.\src\app.js)
+* [createDatabase.js](.\src\createDatabase.js)
+* [data.js](.\src\data.js)
 * [index.js](.\src\index.js)
 
 ## Features
 
-Our Resume Builder App(Website) offers the following key features:
+Our Get YouTube Subscriber backend application offers the following key features:
 
-- **User-Friendly Interface**: The website offers an intuitive and easy-to-navigate interface for creating and editing resumes.
+- **Retrieve Subscriber Data**: Fetch data of all subscribers. The APIs provided by this application 
+-> `GET /subscribers`: Returns an array of all subscribers in the database.
 
-- **Multiple Templates**: Choose from a variety of professionally designed resume templates to suit your preferences.
+- **Retrieve Subscriber names**: Get subscriber name and subscribed channel.The APIs provided by this application 
+-> `GET /subscribers/names`: Returns an array of all subscribers with only two fields name and subscribedChannel.
 
-- **Customization**: Customize each section of your resume, including personal details, work experience, education, skills, and more.
+- **Retrieve Subscriber Information**: Get subscriber details by their unique ID.The APIs provided by this application 
+-> `GET /subscribers/:id`: Returns the details of a subscriber with the given ID.
 
-- **Real-Time Preview**: See a live preview of your resume as you make changes, ensuring it looks just the way you want it to.
-- **Export Options**: Download your completed resume in PDF format, for easy sharing with potential employers.
+- **Technologies Used**
+    * Node.js: Backend development platform.
+    * Express.js: Web framework for Node.js.
+    * MongoDB: NoSQL database for storing subscriber information.
+    * Mongoose: MongoDB object modeling for Node.js.
 
-- **Responsive Design**: The website is responsive, ensuring it works well on both desktop and mobile devices.
+## Installation
 
-## Getting Started
+1. Clone this repository:
 
-Follow these instructions to set up and run the project on your local machine.:
+```bash
+ git clone "https://github.com/jayant753/Get-youtube-subscribers.git"
+```
 
-1. **Clone the Repository**: Clone this repository to your local machine.
+2. Install dependencies:
 
-   bash
-   [https://github.com/your-username/resume-builder-app.git](https://github.com/HACSPACE/Resume_Builder_Project_AlmaX.git)
+```bash
+ npm install
+```
 
-2. **Installation**: Navigate to the project directory and install the required dependencies.
+3. Create a .env file and add monogodb uri and port.
 
-cd resume-builder-app
-npm install
+4. Create a database:
 
-3. **Get Started**: Type "npm start" in terminal to get started.
+```bash
+node ./src/createDatabase.js
+```
+
+5. Start the application:
+
+```bash
+ node ./src/index.js
+```
+
+6. Run tests:
+
+```bash 
+npm test
+```
 
 ## Usage
-
-- **Creating a Resume**: Choose a template, Click the "Use Template" button to begin building your resume. Fill in your details, and customize your resume content.
-
-- **Editing a Resume**: You can edit or update Created Resume, from going Back.
-
-- **Downloading a Resume**: Once you're satisfied with your resume, use the Save options to export it in PDF format.
+Make requests to the specified endpoints to retrieve subscriber data.
+Customize and extend the backend functionality as per your requirements.
+Refer to the API documentation for detailed information on available endpoints and request/response formats.
 
 ## Contributing
+Contributions are welcome! Feel free to fork the repository and submit pull requests to contribute new features, enhancements, or bug fixes.
 
 - **Rahul Singh ([GitHub Profile](https://github.com/HACSPACE))**
 
 
--**Thank you for choosing our Resume Builder Website.**
+-**Thank you for choosing our Get Youtube Subscriber.**
 
-# Resume_Builder_Project_AlmaX
+# Get_YouTube_Subscriber_Project_AlmaX
