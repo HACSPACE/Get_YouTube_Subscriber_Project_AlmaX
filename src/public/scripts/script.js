@@ -1,14 +1,16 @@
 function fetchSubscribersData() {
     // Make an AJAX request to fetch all subscribers data
     // Modify the URL based on your server endpoint
-    const url =  'https://get-youtube-subscriber-project-almax-1.onrender.com/subscribers';
+    const url = process.env.NODE_ENV === 'production' ? 'https://get-youtube-subscriber-project-almax-1.onrender.com/subscribers' : 'http://localhost:3000/subscribers';
+    
     fetchAndDisplayData(url);
 }
 
 function fetchSubscriberNames() {
     // Make an AJAX request to fetch only subscriber names
     // Modify the URL based on your server endpoint
-    const url = 'https://get-youtube-subscriber-project-almax-1.onrender.com/subscribers/names';
+    const url = process.env.NODE_ENV === 'production' ? 'https://get-youtube-subscriber-project-almax-1.onrender.com/subscribers/names' : 'http://localhost:3000/subscribers/names';
+    
     fetchAndDisplayNames(url);
 }
 
@@ -36,7 +38,8 @@ function fetchAndDisplayNames(url) {
 function fetchSubscriberDataById() {
     // Make an AJAX request to fetch subscriber data based on ID
     const inputId = document.getElementById('input-id').value;
-    const url = `https://get-youtube-subscriber-project-almax-1.onrender.com/subscribers/${inputId}`; // Update the URL with your server endpoint
+    const url = process.env.NODE_ENV === 'production' ? `https://get-youtube-subscriber-project-almax-1.onrender.com/subscribers/${inputId}` : `http://localhost:3000/subscribers/${inputId}`;
+    
     fetchAndDisplayData(url);
 }
 
@@ -75,6 +78,6 @@ function fetchAndDisplayData(url) {
         })
         .catch(error => {
             console.error('Error fetching data:', error);
-            // Handle error if needed
+           
         });
 }
