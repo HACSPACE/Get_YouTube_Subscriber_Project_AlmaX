@@ -1,0 +1,74 @@
+<!-- admin.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Now</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
+            position: relative; /* Position relative for absolute positioning of Start Now link */
+        }
+
+        .box:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+        }
+
+        .start-link {
+            position: absolute; /* Position absolute to place at the bottom left corner */
+            bottom: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s ease-in-out; /* Add transition for color change */
+        }
+
+        .start-link:hover {
+            color: #ff4500; /* Change color on hover */
+        }
+
+        .start-link .icon {
+            margin-right: 5px;
+            transition: color 0.3s ease-in-out; /* Add transition for color change */
+        }
+
+        .start-link:hover .icon {
+            color: #ff4500; /* Change color of icon on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="image-container">
+                <img src="https://api.sertifier.com/userdata/08daf47b-89e4-cd1d-208e-96834580c530/d747e244-cfe7-4a53-b0b4-47ad8e0d9ad4.png" alt="Admin Image" width="200">
+            </div>
+            <h2>Get YouTube Subscribers</h2>
+            <h3>Backend Development</h3>
+            <a class="start-link" href="/start-now">
+                Start Now
+                <span class="icon">&#10148;</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
