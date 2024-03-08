@@ -1,14 +1,14 @@
 function fetchSubscribersData() {
     // Make an AJAX request to fetch all subscribers data
     // Modify the URL based on your server endpoint
-    const url =  'http://localhost:3000/subscribers';
+    const url =  'https://get-youtube-subscriber-project-almax-1.onrender.com:10000/subscribers';
     fetchAndDisplayData(url);
 }
 
 function fetchSubscriberNames() {
     // Make an AJAX request to fetch only subscriber names
     // Modify the URL based on your server endpoint
-    const url = 'http://localhost:3000/subscribers/names';
+    const url = 'https://get-youtube-subscriber-project-almax-1.onrender.com:10000/subscribers/names';
     fetchAndDisplayNames(url);
 }
 
@@ -36,7 +36,7 @@ function fetchAndDisplayNames(url) {
 function fetchSubscriberDataById() {
     // Make an AJAX request to fetch subscriber data based on ID
     const inputId = document.getElementById('input-id').value;
-    const url = `http://localhost:3000/subscribers/${inputId}`; // Update the URL with your server endpoint
+    const url = `https://get-youtube-subscriber-project-almax-1.onrender.com:10000/subscribers/${inputId}`; // Update the URL with your server endpoint
     fetchAndDisplayData(url);
 }
 
