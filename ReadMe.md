@@ -65,7 +65,7 @@ Our Get YouTube Subscriber backend application offers the following key features
 1. Clone this repository:
 
 ```bash
- git clone "https://github.com/jayant753/Get-youtube-subscribers.git"
+ git clone "https://github.com/HACSPACE/Get_YouTube_Subscriber_Project_AlmaX.git"
 ```
 
 2. Install dependencies:
