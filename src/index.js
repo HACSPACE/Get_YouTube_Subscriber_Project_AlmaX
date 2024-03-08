@@ -23,7 +23,7 @@ const dbConnectionURL = process.env.DATABASE_URL || "mongodb://127.0.0.1:27017/s
 mongoose.connect(dbConnectionURL, { useNewUrlParser: true, useUnifiedTopology: true }); // Connect to MongoDB using Mongoose
 const db = mongoose.connection;
 db.on('error', (err) => console.error(err)); // Log any connection errors
-db.once('open', () => console.log('Connected to the database')); // Log successful database connection
+db.once('open', () => console.log(`Connected to MongoDB database at ${dbConnectionURL}`)); // Log successful database connection
 
 // Start the server
 module.exports = app.listen(port, () => console.log(`App listening on port ${port}!`)); 

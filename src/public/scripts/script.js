@@ -1,7 +1,7 @@
 function fetchSubscribersData() {
     // Make an AJAX request to fetch all subscribers data
     // Modify the URL based on your server endpoint
-    const url = 'http://localhost:3000/subscribers';
+    const url =  'http://localhost:3000/subscribers';
     fetchAndDisplayData(url);
 }
 
