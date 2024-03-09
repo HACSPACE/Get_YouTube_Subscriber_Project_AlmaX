@@ -1,4 +1,5 @@
-const mongoose = require('mongoose'); // Importing Mongoose for MongoDB object modeling
+// Importing Mongoose for MongoDB object modeling
+const mongoose = require('mongoose'); 
 
 // Defining the schema for a subscriber document
 const subscriberSchema = new mongoose.Schema({
@@ -17,4 +18,5 @@ const subscriberSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Subscriber', subscriberSchema); // Exporting the Mongoose model for the 'Subscriber' collection with the defined schema
+// Exporting the Mongoose model for the 'Subscriber' collection with the defined schema
+module.exports = mongoose.model('Subscriber', subscriberSchema); 
