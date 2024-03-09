@@ -50,7 +50,12 @@ function isProductionEnvironment() {
 // Function to make AJAX request to fetch data
 function fetchAndDisplayData(url) {
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Subscriber not found');
+            }
+            return response.json();
+        })
         .then(data => {
             const subscriberDataElement = document.getElementById('subscriber-data');
             subscriberDataElement.innerHTML = '';
@@ -77,5 +82,9 @@ function fetchAndDisplayData(url) {
         })
         .catch(error => {
             console.error('Error fetching data:', error);
+            alert('Subscriber not found');
+            const subscriberDataElement = document.getElementById('subscriber-data');
+            subscriberDataElement.innerHTML = '<p style="color: red;">Subscriber not found</p>';
         });
 }
+
