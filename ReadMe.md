@@ -3,6 +3,49 @@
 # API DOCUMENTATION
 https://documenter.getpostman.com/view/33528582/2sA2xiWBjL
 
+# Get YouTube Subscribers API Routes
+
+## GET /
+
+- **Description:** Renders the admin dashboard view.
+- **Response:** HTML content rendering the admin dashboard view.
+- **Status Codes:** 
+  - 200: Success
+
+## GET /start-now
+
+- **Description:** Renders the startNow page view.
+- **Response:** HTML content rendering the startNow page view.
+- **Status Codes:** 
+  - 200: Success
+
+## GET /subscribers
+
+- **Description:** Retrieves data of all subscribers.
+- **Response:** JSON array containing data of all subscribers.
+- **Status Codes:** 
+  - 200: Success
+  - 500: Internal Server Error
+
+## GET /subscribers/names
+
+- **Description:** Retrieves names and subscribed channels of all subscribers.
+- **Response:** JSON array containing names and subscribed channels of all subscribers.
+- **Status Codes:** 
+  - 200: Success
+  - 500: Internal Server Error
+
+## GET /subscribers/:id
+
+- **Description:** Retrieves a single subscriber by ID.
+- **Request Parameter:** `id` (Subscriber ID)
+- **Response:** JSON object containing data of the specified subscriber.
+- **Status Codes:** 
+  - 200: Success
+  - 400: Bad Request (Invalid Subscriber ID)
+  - 500: Internal Server Error
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
