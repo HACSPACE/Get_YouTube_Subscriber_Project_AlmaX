@@ -15,7 +15,7 @@
 
 Welcome to the Get YouTube Subscriber backend development project! This project aims to provide a backend solution for managing subscribers of YouTube channels. With this backend application, users can perform various operations such as retrieving subscriber data, fetching subscriber information by ID, and more.
 
-# API DOCUMENTATION
+# API Documentation
 
 https://documenter.getpostman.com/view/29092277/2sA2xiXXaZ
 
