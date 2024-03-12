@@ -17,7 +17,7 @@ Welcome to the Get YouTube Subscriber backend development project! This project 
 
 # API DOCUMENTATION
 
-https://documenter.getpostman.com/view/33528582/2sA2xiWBjL
+https://documenter.getpostman.com/view/29092277/2sA2xiXCi4
 
 # Get YouTube Subscribers API Routes
 
